@@ -25,17 +25,37 @@
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
-  overflow: hidden;
-} */
+  overflow: hidden; */
+}
+
+html {
+  height: 100%;
+}
 
 body {
-  background-color: #FFFFFF;
+  background-color: #F2F2F2;
   font-size: 22px;
   line-height: 26px;
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
   color: #000000;
 }
+
+.page-wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+/* BUTTONS */
 
 .button {
   display: block;
@@ -60,6 +80,16 @@ body {
 .button:active {
   background-color: #756157;
   color: rgba(255, 255, 255, 0.3);
+}
+
+/* TEXTS */
+
+.section-heading {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* HEADER */
@@ -98,14 +128,6 @@ body {
 
 .advantages {
   background-color: #FFFFFF;
-}
-
-.main-heading {
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .main-paragraph {
