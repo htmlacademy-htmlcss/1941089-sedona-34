@@ -14,8 +14,9 @@
   font-display: swap;
 }
 
-/* .visually-hidden {
-  position: absolute;
+.visually-hidden {
+  color:red;
+  /* position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
