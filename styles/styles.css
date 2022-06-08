@@ -328,7 +328,7 @@ body {
   line-height: 37px;
   font-size: 16px;
   font-weight: 400;
-  color:#333333
+  color: #333333
 }
 
 /* PAGINATION */
@@ -370,12 +370,12 @@ body {
 
 .hotel-number-view {
   font-size: 18px;
-  color:#333333
+  color: #333333
 }
 
 /* SUBSCRIBTION SECTION */
 
 .subscribe-catalog {
   background-image: none;
-  color:#000000;
+  color: #000000;
 }
