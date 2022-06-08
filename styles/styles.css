@@ -134,7 +134,8 @@ body {
 /* MAIN START SCREEN */
 
 .main-index {
-  background-image: url("/images/backgrounds/index-background.jpg");
+  background-color: #61859D;
+  background-image: url("../images/backgrounds/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -197,7 +198,7 @@ body {
 }
 
 .subscribe {
-  background-image: url("/images/backgrounds/subscribe-background.jpg");
+  background-image: url("../images/backgrounds/subscribe-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   color: #FFFFFF;
@@ -227,7 +228,7 @@ body {
 /* filter section */
 
 .filter-section {
-  background-image: url("/images/backgrounds/catalog-background.jpg");
+  background-image: url("../images/backgrounds/catalog-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   color: #FFFFFF;
