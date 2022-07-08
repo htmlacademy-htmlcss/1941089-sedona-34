@@ -101,6 +101,7 @@ body {
 .button-blue:active {
   color: rgba(255, 255, 255, 0.3);
 }
+
 /* TEXTS */
 
 .section-heading {
@@ -214,6 +215,12 @@ body {
   background-image: url("../images/backgrounds/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+}
+
+.start-screen::after {
+  position: relative;
+  content: url("../images/backgrounds/start-screen-vector.svg");
+  bottom: -26px;
 }
 
 .start-motto {
