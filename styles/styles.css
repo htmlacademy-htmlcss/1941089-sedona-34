@@ -126,19 +126,6 @@ body {
   fill: rgba(117, 97, 87, 0.3);
 }
 
-.network-icon {
-  fill: #83B3D3;
-}
-
-.network-icon:hover,
-.network-icon:focus {
-  fill: #68A2CA;
-}
-
-.network-icon:active {
-  fill: rgba(104, 162, 202, 0.3);
-}
-
 /* HEADER */
 
 .page-header {
@@ -470,6 +457,19 @@ body {
   justify-content: space-around;
   align-items: center;
 
+}
+
+.network-icon {
+  fill: #83B3D3;
+}
+
+.network-icon-link:hover .network-icon,
+.network-icon-link:focus .network-icon{
+  fill: #68A2CA;
+}
+
+.network-icon-link:active .network-icon {
+  fill: rgba(104, 162, 202, 0.3);
 }
 
 .footer-phone-number {
