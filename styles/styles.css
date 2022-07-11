@@ -705,8 +705,8 @@ body {
 /* catalog main section */
 
 .catalog-header-container {
-  margin-top: 55px;
-  margin-bottom: 55px;
+  margin-top: 65px;
+  margin-bottom: 60px;
   display: flex;
 }
 
@@ -728,12 +728,16 @@ body {
 .hotel-card-container {
   display: grid;
   grid-template-columns: 340px 340px 340px;
-  grid-template-rows: 438px 438px;
+  grid-auto-rows: 438px;
   column-gap: 18px;
 }
 
 .hotel-card {
   padding: 20px;
+}
+
+.hotel-card-image {
+  object-fit: cover;
 }
 
 .hotel-card-link {
@@ -744,17 +748,20 @@ body {
 .hotel-card-title {
   margin: 0;
   margin-top: 10px;
+  margin-bottom: 13px;
   font-size: 24px;
   line-height: 28px;
 }
 
 .hotel-card-options {
   font-size: 18px;
+  margin: 0;
 }
+
 .hotel-card-info {
   display: grid;
   grid-template-columns: 140px 140px;
-  grid-template-rows: 37px;
+  grid-auto-rows: min-content;
   column-gap: 20px;
   row-gap: 16px;
 }
@@ -796,6 +803,7 @@ body {
 .pagination {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 65px;
   padding-top: 30px;
   padding-bottom: 25px;
   border-top: 1px solid #E6E6E6;
