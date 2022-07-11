@@ -842,6 +842,12 @@ body {
   color: #000000;
 }
 
+.hotel-number-view-on-page {
+  display: flex;
+  gap: 51px;
+  align-items: center;
+}
+
 .hotel-number-view {
   font-size: 18px;
   color: #333333
