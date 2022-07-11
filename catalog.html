@@ -113,8 +113,18 @@
                   <div class="price-range-number">
                     <label class="hotel-filter-option hotel-filter-option-price" for="price-min">от</label>
                     <input class="price-min-number" type="number" name="price-min" id="price-min" value="0">
-                    <label class="hotel-filter-option hotel-filter-option-price" for="price-max">до</label>
+                    <label class="hotel-filter-option hotel-filter-option-price hotel-filter-option-price-max" for="price-max">до</label>
                     <input class="price-max-number" type="number" name="price-max" id="price-max" value="9000">
+                  </div>
+                  <div class="price-range-slider">
+                    <div class="price-range-slider-bar">
+                      <button class="price-range-toggle toggle-min" type="button">
+                        <span class="visually-hidden">Изменить минимальную стоимость.</span>
+                      </button>
+                      <button class="price-range-toggle toggle-max" type="button">
+                        <span class="visually-hidden">Изменить максимальную стоимость.</span>
+                      </button>
+                    </div>
                   </div>
                 </fieldset>
                 <div class="filter-buttons">
@@ -129,7 +139,7 @@
           <div class="catalog-header-container">
             <p class="section-heading search-results-heading">Найдено гостиниц: <span class="hotel-count">38</span></p>
             <div class="search-results-view">
-              <select class="sort-select" aria-label="Сортировка">
+              <select class="select sort-select" aria-label="Сортировка">
                 <option value="cheap">Сначала дешёвые</option>
                 <option value="expensive">Сначала дорогие</option>
                 <option value="popular">Сначала популярные</option>
@@ -137,12 +147,34 @@
               <div class="view-select">
                 <a href="#" class="view-button view-button-active">
                   <span class="visually-hidden">Вид отображения: плитка</span>
+                  <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 0H0V6H4V0Z" fill="black"/>
+                    <path d="M16 0H12V6H16V0Z" fill="black"/>
+                    <path d="M10 0H6V6H10V0Z" fill="black"/>
+                    <path d="M4 8H0V14H4V8Z" fill="black"/>
+                    <path d="M16 8H12V14H16V8Z" fill="black"/>
+                    <path d="M10 8H6V14H10V8Z" fill="black"/>
+                  </svg>
                 </a>
                 <a href="#" class="view-button" href="#">
                   <span class="visually-hidden">Вид отображения: карточки</span>
+                  <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 12H0V14H16V12Z" fill="black"/>
+                    <path d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z" fill="black"/>
+                  </svg>
                 </a>
                 <a href="#" class="view-button" href="#">
                   <span class="visually-hidden">Вид отображения: список</span>
+                  <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 0H0V2H2V0Z" fill="black"/>
+                    <path d="M16 0H4V2H16V0Z" fill="black"/>
+                    <path d="M2 4H0V6H2V4Z" fill="black"/>
+                    <path d="M16 4H4V6H16V4Z" fill="black"/>
+                    <path d="M2 8H0V10H2V8Z" fill="black"/>
+                    <path d="M16 8H4V10H16V8Z" fill="black"/>
+                    <path d="M2 12H0V14H2V12Z" fill="black"/>
+                    <path d="M16 12H4V14H16V12Z" fill="black"/>
+                  </svg>
                 </a>
               </div>
             </div>
@@ -236,11 +268,11 @@
             </ul>
             <div class="hotel-number-view-on-page">
               <label class="hotel-number-view" for="hotel-number-on-page">Гостиниц на странице:</label>
-              <select class="hotel-number-view-select" id="hotel-number-on-page">
-              <option value="4">4</option>
-              <option value="8">8</option>
-              <option value="12">12</option>
-            </select>
+              <select class="select hotel-number-view-select" id="hotel-number-on-page">
+                <option value="4">4</option>
+                <option value="8">8</option>
+                <option value="12">12</option>
+              </select>
             </div>
           </div>
         </section>
