@@ -341,6 +341,27 @@ body {
   grid-column: 1/4;
 }
 
+.advantages-item-image-housing {
+  width: 76px;
+  height: 72px;
+  background-image: url(../images/icons/advantages/housing.svg);
+  background-repeat: no-repeat;
+}
+
+.advantages-item-image-food {
+  width: 76px;
+  height: 72px;
+  background-image: url(../images/icons/advantages/food.svg);
+  background-repeat: no-repeat;
+}
+
+.advantages-item-image-souvenirs {
+  width: 65px;
+  height: 76px;
+  background-image: url(../images/icons/advantages/souvenirs.svg);
+  background-repeat: no-repeat;
+}
+
 /* INTERESTED? */
 
 .hotel-search {
