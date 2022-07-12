@@ -925,6 +925,24 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.hotel-four-stars {
+  background-image: url(../images/icons/star.svg), url(../images/icons/star.svg), url(../images/icons/star.svg), url(../images/icons/star.svg);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: 0 center, 24px center, 48px center, 72px center;
+}
+
+.hotel-three-stars {
+  background-image: url(../images/icons/star.svg), url(../images/icons/star.svg), url(../images/icons/star.svg);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 0 center, 24px center, 48px center;
+}
+
+.hotel-two-stars {
+  background-image: url(../images/icons/star.svg), url(../images/icons/star.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 center, 24px center;
+}
+
 .hotel-rating {
   margin: 0;
   border-radius: 4px;
