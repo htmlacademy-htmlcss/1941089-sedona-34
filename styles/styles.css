@@ -662,6 +662,7 @@ body {
 
 .price-min-number,
 .price-max-number {
+  appearance: textfield;
   width: 94px;
   margin-left: 1px;
   padding-top: 12px;
@@ -1186,6 +1187,7 @@ body {
 }
 
 .person-count-field {
+  appearance: textfield;
   position: relative;
   left: 31px;
   flex-grow: 1;
