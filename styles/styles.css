@@ -838,6 +838,7 @@ body {
   color: #333333;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+  background-color: transparent;
   background-image: url(../images/icons/arrow-down.svg);
   background-repeat: no-repeat;
   background-position: right 12px center;
