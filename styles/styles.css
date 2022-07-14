@@ -64,13 +64,14 @@ body {
 /* BUTTONS */
 
 .button {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 4px;
-  height: 37px;
+  min-height: 37px;
   background-color: #756157;
   border: none;
   font-size: 16px;
-  line-height: 37px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -130,10 +131,8 @@ body {
 
 .page-header {
   z-index: 999;
-}
-
-.header-container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .logo-header {
@@ -155,7 +154,6 @@ body {
   flex-grow: 1;
   flex-wrap: wrap;
   column-gap: 34px;
-  height: 100%;
   padding-left: 0;
   margin: 0;
   list-style: none;
@@ -205,7 +203,7 @@ body {
   top: -55px;
   left: 25px;
   border-radius: 10px;
-  width: 20px;
+  min-width: 20px;
   height: 20px;
   background-color: #7DB54F;
   font-size: 10px;
@@ -221,19 +219,20 @@ body {
 /* MAIN START SCREEN */
 
 .start-screen {
-  height: 379px;
+  min-height: 379px;
   padding-top: 51px;
-  padding-bottom: 55px;
+  padding-bottom: 19px;
   background-color: #61859D;
   background-image: url("../images/backgrounds/index-background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .start-screen::after {
-  position: relative;
   content: url("../images/backgrounds/start-screen-vector.svg");
-  bottom: -26px;
+  position: relative;
+  bottom: -25px;
+  width: 100%;
 }
 
 .start-motto {
@@ -244,6 +243,9 @@ body {
 /* ADVANTAGES */
 
 .advantages-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 63px;
   padding-bottom: 90px;
 }
@@ -266,7 +268,7 @@ body {
 .advantages-list {
   display: grid;
   grid-template-columns: 400px 400px 400px;
-  grid-template-rows: 384px 384px 384px 384px;
+  grid-auto-rows: minmax(384px, auto);
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -282,6 +284,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  min-height: 195px;
   padding: 92px 85px;
 }
 
@@ -304,7 +307,7 @@ body {
 .advantages-subitem {
   padding: 80px 85px;
   width: 400px;
-  height: 224px;
+  min-height: 224px;
 }
 
 .advantages-item-lightblue {
@@ -376,15 +379,14 @@ body {
 
 .hotel-paragraph {
   width: 592px;
-  padding-bottom: 25px;
   text-align: center;
 }
 
 .button-hotel-search {
+  margin-top: 25px;
   width: 574px;
-  height: 60px;
+  min-height: 60px;
   font-size: 20px;
-  line-height: 60px;
 }
 
 /* SUBSCRIBE */
@@ -395,7 +397,7 @@ body {
   display: flex;
   flex-direction: column;
   background-image: url("../images/backgrounds/subscribe-background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
   color: #FFFFFF;
 }
@@ -406,6 +408,7 @@ body {
 
 .subscription-form {
   display: flex;
+  align-items: stretch;
 }
 
 .subscribe-paragraph {
@@ -417,7 +420,7 @@ body {
 
 .subscription-field {
   width: 75%;
-  height: 58px;
+  min-height: 58px;
   padding-left: 22px;
   background-color: #F2F2F2;
   border: none;
@@ -439,7 +442,7 @@ body {
 
 .subscription-button {
   width: 25%;
-  height: 60px;
+  min-height: 60px;
   font-size: 20px;
   border-radius: 0 10px 10px 0;
 }
