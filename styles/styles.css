@@ -439,9 +439,11 @@ body {
 
 .subscription-field:focus,
 .subscription-field:active {
-  border: 3px solid #83B3D3;
-  outline: none;
-  height: 52px;
+  outline: 3px solid #83B3D3;
+}
+
+.subscription-field:disabled {
+  color: #D6D6D6;
 }
 
 .subscription-button {
