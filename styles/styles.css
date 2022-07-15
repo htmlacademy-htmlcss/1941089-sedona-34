@@ -400,6 +400,7 @@ body {
   padding: 95px 200px;
   display: flex;
   flex-direction: column;
+  background-color: #3F5E72;
   background-image: url("../images/backgrounds/subscribe-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -526,6 +527,7 @@ body {
   padding-left: 70px;
   padding-bottom: 66px;
   padding-right: 70px;
+  background-color: #3F5E72;
   background-image: url("../images/backgrounds/catalog-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
