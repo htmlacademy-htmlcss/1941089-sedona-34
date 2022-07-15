@@ -307,7 +307,10 @@ body {
 }
 
 .advantages-item-last-row {
-  padding: 102px 85px;
+  /* padding: 102px 85px; */
+  min-height: 168px;
+  padding-top: 102px;
+  padding-bottom: 102px;
 }
 
 .advantages-sublist {
@@ -976,7 +979,7 @@ body {
 
 .hotel-card-title {
   margin: 0;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: 13px;
   font-size: 24px;
   line-height: 28px;
