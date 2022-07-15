@@ -624,14 +624,20 @@ body {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.hotel-filter-option:focus .hotel-filter-option-mark {
+.hotel-filter-option-input:focus + .hotel-filter-option-mark,
+.hotel-filter-option-input:focus-within + .hotel-filter-option-mark {
   background-color: rgba(255, 255, 255, 0.6);
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
   border-radius: 4px;
 }
 
-.hotel-filter-option:active .hotel-filter-option-mark {
+.hotel-filter-option:active + .hotel-filter-option-mark {
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.hotel-filter-option-input:disabled + .hotel-filter-option-mark {
+  outline: 3px solid #D6D6D6;
+  background-color: #D6D6D6;
 }
 
 .hotel-filter-option-label {
@@ -723,19 +729,26 @@ body {
 }
 
 .price-min-number:hover,
-.price-max-number:hover {
+.price-max-number:hover,
+.price-min-number:disabled,
+.prive-max-number:disabled {
   border-color: rgba(255, 255, 255, 0.6);
 }
 
 .price-min-number:focus,
 .price-max-number:focus {
   outline: none;
-  box-shadow: 0 0 0 3px #81B3D2;
+  box-shadow: inset 0 0 0 3px #81b3d2, 0 0 0 3px #81b3d2;
 }
 
 .price-min-number:active,
 .price-max-number:active {
   background-color: #756257;
+}
+
+.price-min-number:disabled,
+.prive-max-number:disabled {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .hotel-filter-option-price {
@@ -777,17 +790,22 @@ body {
 }
 
 .price-range-toggle:hover,
-.price-range-toggle:focus {
+.price-range-toggle:focus,
+.price-range-toggle:focus-within {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .price-range-toggle:focus {
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
 }
 
 .price-range-toggle:active {
-  border: 2px solid #83B3D3;
+  outline: 2px solid #83B3D3;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.price-range-toggle:disabled {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .toggle-max {
@@ -800,17 +818,20 @@ body {
 }
 
 .filter-reset-button {
-  max-height: 20px;
+  display: block;
+  min-height: 32px;
+  width: 100px;
+  border-radius: 4px;
   background: none;
   border: none;
-  padding: 20px;
+  margin-top: 13px;
 }
 
 .filter-buttons {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: auto;
-  margin-bottom: 8px;
 }
 
 .catalog-header-link{
@@ -820,6 +841,15 @@ body {
 }
 
 .catalog-header-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.filter-reset-button:focus,
+.filter-reset-button:focus-within {
+  border: 3px solid #83B3D3;
+}
+
+.filter-reset-button:disabled {
   color: rgba(255, 255, 255, 0.6);
 }
 
