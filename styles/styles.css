@@ -89,6 +89,10 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.button:disabled {
+  background-color: #D6D6D6;
+}
+
 .button-blue {
   background-color: #82B3D3;
 }
@@ -1116,7 +1120,7 @@ body {
 }
 
 .modal-close-button:focus {
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
 }
 
 .modal-close-button:active .modal-close-button-svg {
@@ -1129,24 +1133,22 @@ body {
 
 .hotel-form {
   margin-top: 53px;
+  display: grid;
+  grid-template-columns: 155px 133px 153px 133px;
+  grid-auto-rows: auto;
 }
 
 .form-label {
   font-weight: 700;
   font-size: 20px;
+  margin: auto 0;
   text-transform: capitalize;
-}
-
-.field-label {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
 
 .field {
-  flex-grow: 1;
-  height: 50px;
-  max-width: 401px;
+  min-height: 50px;
   padding-left: 19px;
   font-size: 18px;
   background-color: #F2F2F2;
@@ -1156,6 +1158,8 @@ body {
 }
 
 .field-calendar {
+  grid-column-start: 2;
+  grid-column-end: 5;
   background-image: url(../images/icons/date.svg);
   background-repeat: no-repeat;
   background-position: right 17px center;
@@ -1167,47 +1171,55 @@ body {
 }
 
 .field:focus {
-  max-width: 395px;
-  height: 44px;
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
 }
 
 .field:active {
-  max-width: 397px;
-  height: 46px;
-  border: 2px solid #000000;
+  outline: 2px solid #000000;
   background-color: #FFFFFF;
 }
 
+.field:disabled,
+.person-count-field:disabled {
+  color: #D6D6D6;
+  outline: 2px solid #D6D6D6;
+}
+
 .field-tip {
-  display: block;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 155px;
+  margin-top: 2px;
+  margin-bottom: 10px;
   font-size: 16px;
   color: #333333;
+  grid-column-start: 2;
+  grid-column-end: 5;
 }
 
 .warning {
   color: #FF5757;
 }
 
+.children-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .person-count {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  background-color: #F2F2F2;
+  border-radius: 4px;
 }
 
 .person-count-field {
   appearance: textfield;
-  position: relative;
-  left: 31px;
-  flex-grow: 1;
-  height: 50px;
-  max-width: 133px;
+  max-width: 50px;
+  padding: 0;
+  min-height: 50px;
   font-size: 18px;
   background-color: #F2F2F2;
   border: none;
-  border-radius: 4px;
   outline: none;
   text-align: center;
   cursor: default;
@@ -1223,8 +1235,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 31px;
-  width: 31px;
+  height: 25px;
+  width: 25px;
   background-color: transparent;
   border: none;
   z-index: 999999;
@@ -1244,7 +1256,7 @@ body {
 }
 
 .person-count-button:focus {
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
   border-radius: 4px;
 }
 
@@ -1252,35 +1264,80 @@ body {
   fill: rgba(0, 0, 0, 0.2);
 }
 
-.button-minus {
-  position: relative;
-  left: 64px;
-
-}
-
-.button-plus {
-  position: relative;
-  right: 15px;
-}
-
-
-.children-count-field {
-  position: relative;
+.person-count-button:disabled {
+  fill: transparent;
 }
 
 .find-button {
-  width: 100%;
-  height: 60px;
+  min-height: 60px;
   font-size: 20px;
   margin-top: 40px;
   border-radius: 10px;
+  grid-column-start: 1;
+  grid-column-end: 5;
 }
 
-.adults-field-label {
-  width: 288px;
+.tooltip {
+  position: absolute;
+  margin-top: 3px;
+  margin-left: 93px;
+  width: 25px;
+  height: 25px;
 }
 
-.children-field-label {
-  width: 230px;
-  padding-right: 12px;
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: #83B3D3;
+}
+
+.tooltip-toggle:hover .tooltip-icon,
+.tooltip-toggle:active .tooltip-icon,
+.tooltip-toggle:focus .tooltip-icon {
+  fill: #68A2CA;
+}
+
+.tooltip-text {
+  width: 216px;
+  padding-top: 15px;
+  padding-right: 18px;
+  padding-bottom: 23px;
+  padding-left: 22px;
+  background-color: #333333;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 21px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  position: absolute;
+  margin-top: 15px;
+  left: -115px;
+  display: none;
+}
+
+.tooltip-text::after {
+  content: '';
+  background-image: url(../images/icons/triangle-tooltip.svg);
+  position: absolute;
+  width: 19px;
+  height: 9px;
+  bottom: 100%;
+  left: 0;
+  right: 1px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
 }

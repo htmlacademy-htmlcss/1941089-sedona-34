@@ -172,49 +172,57 @@
             </svg>
           </button>
           <section class="modal-content">
-            <h2 class="section-heading modal-heading">Поиск гостиницы в Седоне</h2>
+            <h2 class="section-heading">Поиск гостиницы в Седоне</h2>
           </section>
         </div>
         <form class="hotel-form" action="https://echo.htmlacademy.ru/" method="post">
-          <div class="field-label">
-            <label class="form-label" for="checkin-date">Дата заезда:</label>
-            <input class="field field-calendar" type="text" id="checkin-date" placeholder="27 апреля 2020">
-          </div>
+          <label class="form-label" for="checkin-date">Дата заезда:</label>
+          <input class="field field-calendar" type="text" id="checkin-date" placeholder="27 апреля 2020" required>
           <span class="field-tip warning">Мы не можем отправить вас в прошлое.</span>
-          <div class="field-label">
-            <label class="form-label" for="checkout-date">Дата выезда:</label>
-            <input class="field field-calendar" type="text" id="checkout-date" placeholder="1 сентября 2021">
-          </div>
+          <label class="form-label" for="checkout-date">Дата выезда:</label>
+          <input class="field field-calendar" type="text" id="checkout-date" placeholder="1 сентября 2021" required>
           <span class="field-tip">На эти даты есть свободные номера. Пока есть.</span>
+          <label class="form-label" for="adults-count">Взрослые:</label>
           <div class="person-count">
-            <div class="field-label adults-field-label">
-              <label class="form-label" for="adults-count">Взрослые:</label>
-              <button class="person-count-button button-minus" type="button">
-                <svg class="person-count-button-svg" width="13" height="1" viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 0L0 1L13 1V0L0 0Z"/>
+            <button class="person-count-button" type="button">
+              <span class="visually-hidden">Уменьшить.</span>
+              <svg class="person-count-button-svg" width="13" height="1" viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0L0 1L13 1V0L0 0Z"/>
+              </svg>
+            </button>
+            <input class="person-count-field" type="number" id="adults-count" placeholder="2" required>
+            <button class="person-count-button" type="button">
+              <span class="visually-hidden">Увеличить.</span>
+              <svg class="person-count-button-svg" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z"/>
+                </svg>
+            </button>
+          </div>
+          <span class="children-label">
+            <label class="form-label" for="children-count">Дети:</label>
+            <span class="tooltip">
+              <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                <svg class="tooltip-icon" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M25 12.5C25 19.4036 19.4036 25 12.5 25C5.59644 25 0 19.4036 0 12.5C0 5.59644 5.59644 0 12.5 0C19.4036 0 25 5.59644 25 12.5ZM13 17V11H12V17H13ZM12 9V8H13V9H12Z"/>
                 </svg>
               </button>
-              <input class="person-count-field" type="number" id="adults-count" placeholder="2">
-              <button class="person-count-button button-plus" type="button">
-                <svg class="person-count-button-svg" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z"/>
-                  </svg>
-              </button>
-            </div>
-            <div class="field-label children-field-label">
-              <label class="form-label" for="adults-count">Дети:</label>
-              <button class="person-count-button button-minus" type="button">
-                <svg class="person-count-button-svg" width="13" height="1" viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path  d="M0 0L0 1L13 1V0L0 0Z"/>
+              <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+            </span>
+          </span>
+          <div class="person-count">
+            <button class="person-count-button" type="button">
+              <span class="visually-hidden">Уменьшить.</span>
+              <svg class="person-count-button-svg" width="13" height="1" viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0L0 1L13 1V0L0 0Z"/>
+              </svg>
+            </button>
+            <input class="person-count-field" type="number" id="children-count" placeholder="1" required>
+            <button class="person-count-button" type="button">
+              <span class="visually-hidden">Увеличить.</span>
+              <svg class="person-count-button-svg" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z"/>
                 </svg>
-              </button>
-              <input class="person-count-field children-count-field" type="number" id="children-count" placeholder="1">
-              <button class="person-count-button button-plus" type="button">
-                <svg class="person-count-button-svg" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z"/>
-                  </svg>
-              </button>
-            </div>
+            </button>
           </div>
           <button class="find-button button button-blue">Найти</button>
         </form>
