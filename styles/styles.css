@@ -144,6 +144,10 @@ body {
   position: absolute;
 }
 
+.logo {
+  max-width: 139px;
+}
+
 .navigation {
   padding-left: 140px;
   flex-grow: 1;
@@ -296,6 +300,10 @@ body {
   display: flex;
   background-color: #82B3D3;
   color: #FFFFFF;
+}
+
+.advantages-photo {
+  max-width: 800px;
 }
 
 .advantages-item-last-row {
@@ -1068,6 +1076,7 @@ body {
 /* SUBSCRIBTION SECTION */
 
 .subscribe-catalog {
+  background-color: #FFFFFF;
   background-image: none;
   color: #000000;
 }
