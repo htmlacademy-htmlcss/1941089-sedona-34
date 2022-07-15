@@ -90,7 +90,7 @@ body {
 }
 
 .button:disabled {
-  background-color: #D6D6D6;
+  background-color: #E5E5E5;
 }
 
 .button-blue {
@@ -963,6 +963,15 @@ body {
 .hotel-card-link {
   text-decoration: none;
   color: inherit;
+}
+
+.hotel-card-link:hover,
+.hotel-card-link:focus {
+  color: #756157;
+}
+
+.hotel-card-link:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
 .hotel-card-title {
